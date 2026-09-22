@@ -1,112 +1,145 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A focused workspace for asking questions about text and files." />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="A focused workspace for asking questions about text and files."/>
     <title>Clarity — Text intelligence workspace</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main class="app-shell">
-      <header class="topbar">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<main class="app-shell">
+    <header class="topbar">
         <a class="brand" href="#" aria-label="Clarity home">
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>clarity</span>
+            <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span>clarity</span>
         </a>
         <div class="topbar-actions">
-          <span class="status-dot"><i></i> API ready</span>
-          <button class="icon-button" id="settingsButton" type="button" aria-label="Open API settings" title="API settings">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.25a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5Z"/><path d="m19.43 15 .04.02a1.83 1.83 0 0 1-2.5 2.5l-.02-.04a1.84 1.84 0 0 0-3.1 1.08l-.01.05a1.83 1.83 0 0 1-3.66 0l-.01-.05a1.84 1.84 0 0 0-3.1-1.08l-.02.04a1.83 1.83 0 0 1-2.5-2.5l.04-.02a1.84 1.84 0 0 0-1.08-3.1l-.05-.01a1.83 1.83 0 0 1 0-3.66l.05-.01a1.84 1.84 0 0 0 1.08-3.1l-.04-.02a1.83 1.83 0 0 1 2.5-2.5l.02.04a1.84 1.84 0 0 0 3.1-1.08l.01-.05a1.83 1.83 0 0 1 3.66 0l.01.05a1.84 1.84 0 0 0 3.1 1.08l.02-.04a1.83 1.83 0 0 1 2.5 2.5l-.04.02a1.84 1.84 0 0 0 1.08 3.1l.05.01a1.83 1.83 0 0 1 0 3.66l-.05.01A1.84 1.84 0 0 0 19.43 15Z"/></svg>
-          </button>
-          <div class="avatar">AS</div>
+            <span class="status-dot"><i></i> API ready</span>
+            <button class="icon-button" id="settingsButton" type="button" aria-label="Open API settings"
+                    title="API settings">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M12 15.25a3.25 3.25 0 1 0 0-6.5 3.25 3.25 0 0 0 0 6.5Z"/>
+                    <path d="m19.43 15 .04.02a1.83 1.83 0 0 1-2.5 2.5l-.02-.04a1.84 1.84 0 0 0-3.1 1.08l-.01.05a1.83 1.83 0 0 1-3.66 0l-.01-.05a1.84 1.84 0 0 0-3.1-1.08l-.02.04a1.83 1.83 0 0 1-2.5-2.5l.04-.02a1.84 1.84 0 0 0-1.08-3.1l-.05-.01a1.83 1.83 0 0 1 0-3.66l.05-.01a1.84 1.84 0 0 0 1.08-3.1l-.04-.02a1.83 1.83 0 0 1 2.5-2.5l.02.04a1.84 1.84 0 0 0 3.1-1.08l.01-.05a1.83 1.83 0 0 1 3.66 0l.01.05a1.84 1.84 0 0 0 3.1 1.08l.02-.04a1.83 1.83 0 0 1 2.5 2.5l-.04.02a1.84 1.84 0 0 0 1.08 3.1l.05.01a1.83 1.83 0 0 1 0 3.66l-.05.01A1.84 1.84 0 0 0 19.43 15Z"/>
+                </svg>
+            </button>
+            <div class="avatar">AS</div>
         </div>
-      </header>
+    </header>
 
-      <section class="workspace">
+    <section class="workspace">
         <div class="intro-row">
-          <div>
-            <p class="eyebrow">TEXT INTELLIGENCE <span></span> SESSION 01</p>
-            <h1>Make sense of<br /><em>anything.</em></h1>
-            <p class="intro-copy">Ask a question about your text, drop in a file,<br class="desktop-break" /> and get a clear answer in seconds.</p>
-          </div>
-          <div class="session-note"><span class="sparkle">✦</span><span>Private workspace<br /><small>Your content stays yours</small></span></div>
+            <div>
+                <p class="eyebrow">TEXT INTELLIGENCE <span></span> SESSION 01</p>
+                <h1>Make sense of<br/><em>anything.</em></h1>
+                <p class="intro-copy">Ask a question about your text, drop in a file,<br class="desktop-break"/> and get
+                    a clear answer in seconds.</p>
+            </div>
+            <div class="session-note"><span class="sparkle">✦</span><span>Private workspace<br/><small>Your content stays yours</small></span>
+            </div>
         </div>
 
         <div class="response-area">
-          <div class="response-header">
-            <div class="response-title"><span class="response-icon">✦</span><span>Response</span><span class="live-pill"><i></i> READY</span></div>
-            <button class="clear-button" id="clearButton" type="button">Clear <span>⌘ K</span></button>
-          </div>
-          <div class="response-grid">
-            <div class="response-card" id="responseCard">
-              <div class="empty-state" id="emptyState">
-                <div class="empty-orbit"><span>✦</span></div>
-                <h2>Your answer will appear here</h2>
-                <p>Start by asking a question below.<br />Clarity will read between the lines.</p>
-              </div>
-              <div class="answer-state" id="answerState" hidden>
-                <p class="answer-kicker">ANALYSIS COMPLETE</p>
-                <h2 id="answerHeading">Here’s what stands out.</h2>
-                <p id="answerText">The text suggests a clear focus on making complex information easier to understand. The strongest themes are clarity, confidence, and keeping the reader moving toward a decision.</p>
-                <div class="answer-tags"><span>Key themes</span><span>Plain language</span><span>High signal</span></div>
-              </div>
+            <div class="response-header">
+                <div class="response-title"><span class="response-icon">✦</span><span>Response</span><span
+                        class="live-pill"><i></i> READY</span></div>
+                <button class="clear-button" id="clearButton" type="button">Clear <span>⌘ K</span></button>
             </div>
-            <aside class="confidence-card">
-              <div class="confidence-top"><span>CONFIDENCE</span><span class="info-dot" title="Based on signal quality and context">i</span></div>
-              <div class="confidence-score"><strong id="confidenceValue">—</strong><span>%</span></div>
-              <div class="meter"><span id="confidenceMeter"></span></div>
-              <p id="confidenceNote">Waiting for a question</p>
-              <div class="confidence-footer"><span class="pulse"></span><span id="confidenceLabel">No analysis yet</span></div>
-            </aside>
-          </div>
+            <div class="response-grid">
+                <div class="response-card" id="responseCard">
+                    <div class="empty-state" id="emptyState">
+                        <div class="empty-orbit"><span>✦</span></div>
+                        <h2>Your answer will appear here</h2>
+                        <p>Start by asking a question below.<br/>Clarity will read between the lines.</p>
+                    </div>
+                    <div class="answer-state" id="answerState" hidden>
+                        <p class="answer-kicker">ANALYSIS COMPLETE</p>
+                        <h2 id="answerHeading">Here’s what stands out.</h2>
+                        <p id="answerText">The text suggests a clear focus on making complex information easier to
+                            understand. The strongest themes are clarity, confidence, and keeping the reader moving
+                            toward a decision.</p>
+                        <div class="answer-tags">
+                            <span>Key themes</span><span>Plain language</span><span>High signal</span></div>
+                    </div>
+                </div>
+                <aside class="confidence-card">
+                    <div class="confidence-top"><span>CONFIDENCE</span><span class="info-dot"
+                                                                             title="Based on signal quality and context">i</span>
+                    </div>
+                    <div class="confidence-score"><strong id="confidenceValue">—</strong><span>%</span></div>
+                    <div class="meter"><span id="confidenceMeter"></span></div>
+                    <p id="confidenceNote">Waiting for a question</p>
+                    <div class="confidence-footer"><span class="pulse"></span><span
+                            id="confidenceLabel">No analysis yet</span></div>
+                </aside>
+            </div>
         </div>
 
         <section class="composer-wrap">
-          <div class="mode-tabs" role="tablist" aria-label="Input type">
-            <button class="mode-tab active" id="textTab" type="button" role="tab" aria-selected="true" data-mode="text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6.5h16M4 11.5h11M4 16.5h16"/></svg> Text</button>
-            <button class="mode-tab" id="fileTab" type="button" role="tab" aria-selected="false" data-mode="file"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 4H6.8A1.8 1.8 0 0 0 5 5.8v12.4A1.8 1.8 0 0 0 6.8 20h10.4a1.8 1.8 0 0 0 1.8-1.8V9l-6-5Z"/><path d="M13 4v5h6M8.5 14h7M8.5 17h5"/></svg> File</button>
-          </div>
-          <div class="composer">
-            <label class="question-field">
-              <span>YOUR QUESTION</span>
-              <input id="questionInput" type="text" placeholder="What should I look for?" autocomplete="off" />
-            </label>
-            <div class="divider"></div>
-            <label class="source-field" id="sourceField">
-              <span>TEXT TO ANALYZE</span>
-              <textarea id="textInput" rows="2" placeholder="Paste or write your text here..."></textarea>
-              <span class="character-count"><span id="characterCount">0</span> / 5,000</span>
-            </label>
-            <label class="file-field" id="fileField" hidden>
-              <span>DOCUMENT</span>
-              <input id="fileInput" type="file" accept=".txt,.md,.pdf,.doc,.docx" />
-              <span class="file-drop"><strong>Choose a file</strong> or drag it here <small>TXT, MD, PDF, DOCX · 10 MB max</small></span>
-            </label>
-            <button class="send-button" id="sendButton" type="button" aria-label="Analyze text"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-3 14-4.5-6L5 12Z"/><path d="M11.5 13.5 19 5"/></svg></button>
-          </div>
-          <p class="composer-hint"><span>↵</span> Press Enter to analyze <span class="hint-separator">•</span> <span>Shift + Enter</span> for a new line</p>
+            <div class="mode-tabs" role="tablist" aria-label="Input type">
+                <button class="mode-tab active" id="textTab" type="button" role="tab" aria-selected="true"
+                        data-mode="text">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 6.5h16M4 11.5h11M4 16.5h16"/>
+                    </svg>
+                    Text
+                </button>
+                <button class="mode-tab" id="fileTab" type="button" role="tab" aria-selected="false" data-mode="file">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13 4H6.8A1.8 1.8 0 0 0 5 5.8v12.4A1.8 1.8 0 0 0 6.8 20h10.4a1.8 1.8 0 0 0 1.8-1.8V9l-6-5Z"/>
+                        <path d="M13 4v5h6M8.5 14h7M8.5 17h5"/>
+                    </svg>
+                    File
+                </button>
+            </div>
+            <div class="composer">
+                <label class="question-field">
+                    <span>YOUR QUESTION</span>
+                    <input id="questionInput" type="text" placeholder="What should I look for?" autocomplete="off"/>
+                </label>
+                <div class="divider"></div>
+                <label class="source-field" id="sourceField">
+                    <span>TEXT TO ANALYZE</span>
+                    <textarea id="textInput" rows="2" placeholder="Paste or write your text here..."></textarea>
+                    <span class="character-count"><span id="characterCount">0</span> / 5,000</span>
+                </label>
+                <label class="file-field" id="fileField" hidden>
+                    <span>DOCUMENT</span>
+                    <input id="fileInput" type="file" accept=".txt,.md,.pdf,.doc,.docx"/>
+                    <span class="file-drop"><strong>Choose a file</strong> or drag it here <small>TXT, MD, PDF, DOCX · 10 MB max</small></span>
+                </label>
+                <button class="send-button" id="sendButton" type="button" aria-label="Analyze text">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m5 12 14-7-3 14-4.5-6L5 12Z"/>
+                        <path d="M11.5 13.5 19 5"/>
+                    </svg>
+                </button>
+            </div>
+            <p class="composer-hint"><span>↵</span> Press Enter to analyze <span class="hint-separator">•</span> <span>Shift + Enter</span>
+                for a new line</p>
         </section>
-      </section>
-      <footer><span>CLARITY ENGINE v1.0</span><span>Built for thoughtful answers</span></footer>
-    </main>
+    </section>
+    <footer><span>CLARITY ENGINE v1.0</span><span>Built for thoughtful answers</span></footer>
+</main>
 
-    <div class="modal-backdrop" id="settingsModal" hidden>
-      <div class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+<div class="modal-backdrop" id="settingsModal" hidden>
+    <div class="settings-modal" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
         <button class="modal-close" id="closeModal" type="button" aria-label="Close settings">×</button>
         <div class="modal-icon">⚙</div>
         <p class="eyebrow">CONNECTION</p>
         <h2 id="settingsTitle">API settings</h2>
         <p class="modal-copy">Add your provider key to connect Clarity to a language model.</p>
-        <label class="api-label">API KEY<input id="apiKeyInput" type="password" placeholder="sk-••••••••••••••••••••" /></label>
-        <label class="remember-row"><input id="rememberKey" type="checkbox" checked /> <span>Remember on this device</span></label>
+        <label class="api-label">API KEY<input id="apiKeyInput" type="password" placeholder="sk-••••••••••••••••••••"/></label>
+        <label class="remember-row"><input id="rememberKey" type="checkbox" checked/>
+            <span>Remember on this device</span></label>
         <button class="save-button" id="saveSettings" type="button">Save connection <span>→</span></button>
         <p class="secure-note">⌁ Your key is stored locally in this browser.</p>
-      </div>
     </div>
-    <script src="script.js"></script>
-  </body>
+</div>
+<script src="script.js"></script>
+</body>
 </html>
