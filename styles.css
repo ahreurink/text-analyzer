@@ -537,6 +537,10 @@ h1 em {
     grid-column: 3
 }
 
+.file-field[hidden] {
+    display: none
+}
+
 .file-field input {
     display: none
 }
