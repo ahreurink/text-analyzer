@@ -45,35 +45,6 @@ fileInput.addEventListener('change', () => {
     }
 });
 
-function analyze() {
-    console.log('Analyze function called');
-    const question = questionInput.value.trim() || 'What should I look for?';
-    const text = textInput.value.trim();
-    const hasFile = fileInput.files.length > 0;
-    if (!text && !hasFile) {
-        textInput.focus();
-        textInput.style.setProperty('color', '#b26b5e');
-        setTimeout(() => textInput.style.removeProperty('color'), 700);
-        return;
-    }
-    emptyState.hidden = true;
-    answerState.hidden = false;
-    document.querySelector('#answerHeading').textContent = question.endsWith('?')
-        ? `Here’s the clearest answer.` : `Here’s what stands out.`;
-    document.querySelector('#answerText').textContent = hasFile
-        ? `I’m ready to review “${fileInput.files[0].name}” for ${question.toLowerCase()}. 
-        This demo response shows where your connected model’s analysis will appear.`
-        : `The text suggests a clear focus on making complex information easier to understand. 
-        For “${question.toLowerCase()}”, the strongest signals are clarity, confidence, and keeping 
-        the reader moving toward a decision.`;
-    const score = Math.min(96, Math.max(78, 82 + Math.round((text.length || 300) / 150)));
-    confidenceValue.textContent = score;
-    confidenceMeter.style.width = `${score}%`;
-    confidenceNote.textContent = text.length > 120 || hasFile ? 'Strong context and signal' : 'Good signal, limited context';
-    confidenceLabel.textContent = 'Analysis complete';
-    document.querySelector('.pulse').classList.add('active');
-}
-
 sendButton.addEventListener('click', analyze);
 textInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter' && !event.shiftKey) {
