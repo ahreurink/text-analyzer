@@ -40,7 +40,12 @@ async function analyze() {
             body: JSON.stringify({
                 model: 'openjev-latest',
                 state: text,
-                questions: {q: {type: 'noul'}}
+                questions: {
+                    question: {
+                        type: 'noul',
+                        instructions: question
+                    }
+                }
             })
         });
 
@@ -55,12 +60,22 @@ async function analyze() {
             throw new Error(`${response.status}: ${message}`);
         }
 
-        const answer = typeof result === 'string'
-            ? result
-            : result?.answer || result?.response || result?.result || result?.q || JSON.stringify(result, null, 2);
+        const score = Number(result?.answers?.question?.noul);
+        if (!Number.isFinite(score)) {
+            throw new Error('The response did not contain a numeric answers.question.noul value.');
+        }
+
+        const answer = score > 0.5 ? 'Yes' : 'No';
+        const confidence = score < 0.5 ? 1 - score : score;
+        const percentage = Math.min(1, Math.max(0, confidence)) * 100;
+        const answerText = document.querySelector('#answerText');
         document.querySelector('#answerHeading').textContent = question.endsWith('?')
             ? 'Here’s the clearest answer.' : 'Here’s what stands out.';
-        document.querySelector('#answerText').textContent = String(answer);
+        answerText.textContent = answer;
+        answerText.classList.remove('answer-yes', 'answer-no');
+        answerText.classList.add(answer === 'Yes' ? 'answer-yes' : 'answer-no');
+        confidenceValue.textContent = percentage.toFixed(2);
+        confidenceMeter.style.width = `${percentage}%`;
         confidenceNote.textContent = 'Response received from Codiv';
         confidenceLabel.textContent = 'Analysis complete';
     } catch (error) {

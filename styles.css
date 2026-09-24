@@ -343,6 +343,21 @@ h1 em {
     line-height: 1.65
 }
 
+.answer-state #answerText.answer-yes,
+.answer-state #answerText.answer-no {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2
+}
+
+.answer-state #answerText.answer-yes {
+    color: #4d9b43
+}
+
+.answer-state #answerText.answer-no {
+    color: #c05c55
+}
+
 .answer-tags {
     display: flex;
     gap: 7px;
