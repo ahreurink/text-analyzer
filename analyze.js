@@ -21,6 +21,7 @@ async function analyze() {
     sendButton.setAttribute('aria-busy', 'true');
     emptyState.hidden = true;
     answerState.hidden = false;
+    document.querySelector('#answerText').classList.remove('answer-yes', 'answer-no');
     document.querySelector('#answerHeading').textContent = 'Analyzing your text…';
     document.querySelector('#answerText').textContent = 'Clarity is waiting for the model response.';
     confidenceValue.textContent = '—';
