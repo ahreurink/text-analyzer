@@ -713,6 +713,10 @@ footer {
     box-shadow: 0 0 0 3px #edf5d2
 }
 
+.api-label + .api-label {
+    margin-top: 14px
+}
+
 .remember-row {
     display: flex;
     align-items: center;
