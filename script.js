@@ -83,18 +83,13 @@ settingsModal.addEventListener('click', (event) => {
     if (event.target === settingsModal) settingsModal.hidden = true;
 });
 document.querySelector('#saveSettings').addEventListener('click', () => {
-    const apiUrl = document.querySelector('#apiUrlInput').value.trim();
     const key = document.querySelector('#apiKeyInput').value.trim();
     if (document.querySelector('#rememberKey').checked) {
-        if (apiUrl) localStorage.setItem('clarity-api-url', apiUrl);
-        else localStorage.removeItem('clarity-api-url');
         if (key) localStorage.setItem('clarity-api-key', key);
         else localStorage.removeItem('clarity-api-key');
     }
     document.querySelector('.status-dot').innerHTML = '<i></i> API connected';
     settingsModal.hidden = true;
 });
-const savedApiUrl = localStorage.getItem('clarity-api-url');
-if (savedApiUrl) document.querySelector('#apiUrlInput').value = savedApiUrl;
 const savedKey = localStorage.getItem('clarity-api-key');
 if (savedKey) document.querySelector('.status-dot').innerHTML = '<i></i> API connected';

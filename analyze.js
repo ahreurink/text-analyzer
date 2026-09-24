@@ -11,7 +11,6 @@ async function analyze() {
 
     const apiUrl = 'https://royal-glade-591a.ahreurink.workers.dev';
     const apiKey = document.querySelector('#apiKeyInput').value.trim() || localStorage.getItem('clarity-api-key');
-    const usesDirectCodiv = false;
     if (!apiKey) {
         settingsModal.hidden = false;
         document.querySelector('#apiKeyInput').focus();
@@ -66,7 +65,7 @@ async function analyze() {
         confidenceLabel.textContent = 'Analysis complete';
     } catch (error) {
         document.querySelector('#answerHeading').textContent = 'Analysis could not be completed.';
-        document.querySelector('#answerText').textContent = error.message || 'The Codiv request failed. Check your API URL and key, then try again.';
+        document.querySelector('#answerText').textContent = error.message || 'The analysis request failed. Check your API key and try again.';
         confidenceNote.textContent = 'Request failed';
         confidenceLabel.textContent = 'Connection error';
         document.querySelector('.pulse').classList.remove('active');
